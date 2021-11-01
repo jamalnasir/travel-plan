@@ -43,7 +43,7 @@ $json = '[
 $planner = new \Nasir\MultiBank\Planner($json);
 
 echo '<pre>';
-var_dump($planner->planMyJourney()[0]);
+var_dump($planner->planMyJourney());
 echo '</pre>';
 
 

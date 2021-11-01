@@ -2,10 +2,10 @@
 
 namespace Nasir\MultiBank;
 
-class Train extends JourneyStrip {
+class Bus extends JourneyStrip {
 
     private $seat;
-    private $type = 'train';
+    private $type = 'bus';
 
     public function __construct($number, $seat, $from, $to) {
         $this->number = $number;
@@ -16,7 +16,8 @@ class Train extends JourneyStrip {
 
     public function passDescription()
     {
-        return 'Take train ' . $this->getNumber() . ' from ' . $this->getFrom() . ' to ' . $this->getTo() . ' . Sit in seat ' . $this->getSeat();
+        $seat = $this->getSeat();
+        return 'Take the airport bus from ' . $this->getFrom() . ' to ' . $this->getTo() . ' Airport. ' . (empty($seat) ? 'No seat assignment.' : 'Sit in seat ' . $this->getSeat());
     }
 
     protected function getNumber()
@@ -36,9 +37,5 @@ class Train extends JourneyStrip {
 
     private function getSeat() {
         return $this->seat;
-    }
-
-    private function getType() {
-        return $this->type;
     }
 }
