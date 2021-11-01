@@ -16,7 +16,7 @@ class Train extends JourneyStrip {
 
     public function passDescription()
     {
-        return 'Take train ' . $this->getNumber() . ' from ' . $this->getFrom() . ' to ' . $this->getTo() . ' . Sit in seat ' . $this->getSeat();
+        return 'Take train ' . $this->getNumber() . ' from ' . $this->getFrom() . ' to ' . $this->getTo() . '. Sit in seat ' . $this->getSeat() . '.';
     }
 
     protected function getNumber()

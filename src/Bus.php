@@ -38,4 +38,8 @@ class Bus extends JourneyStrip {
     private function getSeat() {
         return $this->seat;
     }
+
+    private function getType() {
+        return $this->type;
+    }
 }

@@ -5,15 +5,15 @@ use \Nasir\MultiBank\Planner;
 
 $json = '[
     {
-        "type": "airplane",
-        "number": "flight SK22",
-        "from": "Aleppo",
-        "to": "Montreal YUL",
-        "seat": "7B",
-        "gate": "22",
+        "type": "train",
+        "number": "23A",
+        "from": "Beirut",
+        "to": "Turkey",
+        "seat": "15B",
+        "gate": null,
         "counter": null
-    },
-    {
+     },
+     {
         "type": "bus",
         "number": "airport",
         "from": "Turkey",
@@ -32,20 +32,31 @@ $json = '[
         "counter": "344"
      },
      {
-        "type": "train",
-        "number": "23A",
-        "from": "Beirut",
-        "to": "Turkey",
-        "seat": "15B",
-        "gate": null,
+        "type": "airplane",
+        "number": "flight SK22",
+        "from": "Aleppo",
+        "to": "Montreal YUL",
+        "seat": "7B",
+        "gate": "22",
         "counter": null
-     }
+    }
+
+
+
+
     ]';
 
 $planner = new Planner($json);
 
+
+
+echo '=====================================';
+echo '=====================================';
+echo '=====================================';
+
 echo '<pre>';
-echo $planner->planMyJourney();
+// echo $json;
+echo $planner->showMyJourney();
 echo '</pre>';
 
 
