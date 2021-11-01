@@ -64,3 +64,14 @@ echo '<pre>';
 echo $planner->showMyJourney();
 echo '</pre>';
 ```
+
+# Order of complexity
+
+I have used the following complexities to sort all the passes.
+- O(n) in makeJourneyObject method inside Planner class.
+- O(n) in planTheJourney method inside Planner class.
+
+And the following complexity is used to just render the result in presentable format
+- O(n) in showMyJourney method inside Planner class.
+
+So, total of O(3n) complexity is used to process and render the results.
