@@ -65,7 +65,7 @@ echo $planner->showMyJourney();
 echo '</pre>';
 ```
 
-# Order of complexity
+# Big-O complexity
 
 I have used the following complexities to sort all the passes.
 - O(n) in makeJourneyObject method inside Planner class.
@@ -75,3 +75,12 @@ And the following complexity is used to just render the result in presentable fo
 - O(n) in showMyJourney method inside Planner class.
 
 So, total of O(3n) complexity is used to process and render the results.
+
+# Extending the API
+
+We can easily extend the API to incorporate new types of transportation by following the below steps.
+
+- Create a specialised class inside the src directory with the namespace ```Nasir\Multibank```.
+- Extend this class from JourneyStrip class and implement all the required methods from the parent class.
+- Add the type to the PassFactory class so that Planner class can get the appropriate object.
+- run ```composer dumpautoload``` once all done to load the newly added class in autoload file.
