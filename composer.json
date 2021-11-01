@@ -1,0 +1,17 @@
+{
+    "name": "nasir/multibank",
+    "description": "Connecting the journey dots together to form an awesome expedition.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Nasir\\MultiBank\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jamal Abdul Nasir",
+            "email": "janasir35@gmail.com"
+        }
+    ],
+    "require": {}
+}
