@@ -10,7 +10,7 @@ Run composer dumpautoload on the project root directory so that all the classes 
 
 Inside the index file the sorter can be drive as below. Also, on every run the array is shuffled and you will see different results.
 
-<?php
+```<?php
 require 'vendor/autoload.php';
 
 use \Nasir\MultiBank\Planner;
@@ -63,5 +63,4 @@ $planner = new Planner($json);
 echo '<pre>';
 echo $planner->showMyJourney();
 echo '</pre>';
-
-
+```
