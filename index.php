@@ -1,6 +1,8 @@
 <?php
 require 'vendor/autoload.php';
 
+use \Nasir\MultiBank\Planner;
+
 $json = '[
     {
         "type": "airplane",
@@ -40,10 +42,10 @@ $json = '[
      }
     ]';
 
-$planner = new \Nasir\MultiBank\Planner($json);
+$planner = new Planner($json);
 
 echo '<pre>';
-var_dump($planner->planMyJourney());
+echo $planner->planMyJourney();
 echo '</pre>';
 
 

@@ -17,16 +17,18 @@ class Planner {
 
         foreach($this->journey as $journey) {
             $pass = PassFactory::create($journey);
-            if(!empty($pass)) $this->objectsToPlan[] = $pass;
+            if(!empty($pass)) $this->objectsToPlan[] = $pass->passDescription();
         }
 
-        return $this->objectsToPlan;
+        return implode('<br>', $this->objectsToPlan);
 
     }
 
     private function makeJourneyObject($journey) {
 
         $this->journey = json_decode($journey, true);
+
+        shuffle($this->journey);
 
     }
 

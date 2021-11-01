@@ -11,10 +11,11 @@ class PassFactory {
 
             case 'train'; return new Train($make['number'], $make['seat'], $make['from'], $make['to']);
             case 'bus'; return new Bus($make['number'], $make['seat'], $make['from'], $make['to']);
+            case 'airplane'; return new AirPlane($make['number'], $make['seat'], $make['from'], $make['to'], $make['gate'], $make['counter']);
             default: return null;
 
         }
 
     }
-    
+
 }
