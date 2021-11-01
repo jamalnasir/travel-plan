@@ -48,14 +48,7 @@ $json = '[
 
 $planner = new Planner($json);
 
-
-
-echo '=====================================';
-echo '=====================================';
-echo '=====================================';
-
 echo '<pre>';
-// echo $json;
 echo $planner->showMyJourney();
 echo '</pre>';
 
